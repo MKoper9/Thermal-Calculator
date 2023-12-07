@@ -6,15 +6,15 @@ namespace App\Controller;
 
 use App\View;
 use App\Request;
+use App\Model\CalculatorModel;
 use App\Exception\StorageException;
-use App\Exception\NotFoundException;
 use App\Exception\ConfigurationException;
-use CalculatorModel;
 
 abstract class AbstractController
 {
     private static array $configuration = [];
 
+    protected CalculatorModel $calculatorModel;
     protected View $view;
     protected Request $request;
 
@@ -38,10 +38,7 @@ abstract class AbstractController
             }
             $this->$action();
         } catch (StorageException $e) {
-            // Log::error($e->getPrevios());
             $this->view->render('error', ['message' => $e->getMessage()]);
-        } catch (NotFoundException $e) {
-            $this->redirect('/', ['error' => 'noteNotFound']);
         }
     }
 

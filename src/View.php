@@ -9,7 +9,7 @@ class View
     public function render(string $page, array $params = []): void
     {
         $params = $this->escape($params);
-        require_once("templates/list.php");
+        require_once("templates/pages/list.php");
     }
 
     private function escape(array $params): array

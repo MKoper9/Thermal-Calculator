@@ -6,5 +6,5 @@ namespace App\Model;
 
 class CalculatorModel extends AbstractModel
 {
-    
+
 }
