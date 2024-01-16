@@ -12,6 +12,8 @@ use App\Exception\ConfigurationException;
 
 abstract class AbstractController
 {
+    protected const DEFAULT_ACTION = 'list';
+
     private static array $configuration = [];
 
     protected CalculatorModel $calculatorModel;
@@ -47,8 +49,8 @@ abstract class AbstractController
         self::$configuration = $configuration;
     }
 
-    final private function action(): string
+    private function action(): string
     {
-        return $this->request->getParam('action', '');
+        return $this->request->getParam('action', self::DEFAULT_ACTION);
     }
 }
