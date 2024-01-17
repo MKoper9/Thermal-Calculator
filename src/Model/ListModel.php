@@ -9,7 +9,7 @@ use App\Exception\ConfigurationException;
 use App\Exception\StorageException;
 use PDOException;
 
-abstract class AbstractModel
+abstract class ListModel
 {
     protected PDO $conn;
 
@@ -46,5 +46,13 @@ abstract class AbstractModel
         ) {
             throw new ConfigurationException('Storage configuration error');
         }
+    }
+
+    private function showAll(): array
+    {
+        $query = "SELECT id, material, specific_heat FROM materials";
+
+        $result = $this->conn->query($query);
+        return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 }
