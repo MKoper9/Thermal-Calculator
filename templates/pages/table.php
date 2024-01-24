@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Table</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="/public/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <table>
+        <div class="header">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Material</th>
+                    <th>Density</th>
+                    <th>Specific Heat</th>
+                    <th>Heat Conduction Coefficient</th>
+                </tr>
+                <tr>
+                    <th>[-]</th>
+                    <th>[-]</th>
+                    <th>kg/m3</th>
+                    <th>kJ/(kgK)</th>
+                    <th>W/(mK)</th>
+                </tr>
+            </thead>
+        </div>
+        <tbody>
+            <?php foreach ($params['materials'] as $material) : ?>
+                <tr>
+                    <th><?php echo $material['id']; ?></th>
+                    <th><?php echo $material['material']; ?></th>
+                    <th><?php echo $material['density']; ?></th>
+                    <th><?php echo $material['specific_heat']; ?></th>
+                    <th><?php echo $material['heat_conduction_coefficient']; ?></th>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</body>
+
+</html>
