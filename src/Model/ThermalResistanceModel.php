@@ -7,7 +7,7 @@ namespace App\Model;
 /**
  * R [m2×K/W]
  */
-class ThermalResistance extends AbstractModel
+class ThermalResistanceModel extends AbstractModel
 {
     private float $dimension;
     private float $heatConductionCoefficient;

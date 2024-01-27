@@ -6,7 +6,7 @@ namespace App\Model;
 
 use App\Model\ThermalResistance;
 
-class HeatTransferCoefficient extends AbstractModel
+class HeatTransferCoefficientModel extends AbstractModel
 {
     private int $type = 0;
 
