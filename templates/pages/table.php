@@ -5,38 +5,8 @@
     <title>Table</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-    <link href="D:/Projekty/calculator/public/style.css" rel="stylesheet">
+    <link href="public/style.css" rel="stylesheet">
 </head>
-<style>
-    body {
-        color: #333;
-        background-color: beige;
-    }
-
-    table,
-    tr,
-    td,
-    th {
-        border: 1px solid;
-        border-collapse: collapse;
-        padding: 15px;
-        width: auto;
-    }
-
-    .material {
-        text-align: left;
-    }
-
-    .standard {
-        background-color: #98FB98;
-    }
-
-    .name {
-        background-color: #00FF00;
-        text-transform: uppercase;
-    }
-</style>
-
 <body>
     <table>
         <thead>
@@ -67,6 +37,9 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    <br>
+    <br>
+    <br>
 </body>
 
 </html>

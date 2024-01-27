@@ -5,7 +5,6 @@ namespace App\Model;
 
 use PDO;
 
-
 class MaterialModel extends AbstractModel
 {
     public function getAll(): array

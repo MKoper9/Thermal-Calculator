@@ -16,5 +16,4 @@ class MaterialController extends AbstractController
             ]
         );
     }
-
 }
