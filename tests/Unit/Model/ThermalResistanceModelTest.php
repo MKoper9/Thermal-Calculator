@@ -10,7 +10,7 @@ use App\Model\ThermalResistanceModel;
 class ThermalResistanceModelTest extends TestCase
 {
     /** @test */
-    public function calculate(): void
+    public function calculateSuccess(): void
     {
         //Given
         $thermalResistanceModel = new ThermalResistanceModel(0.1, 0.04);
