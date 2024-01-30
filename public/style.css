@@ -26,3 +26,8 @@ th {
     background-color: #00FF00;
     text-transform: uppercase;
 }
+
+form input[type=text],
+form input[type="submit"] {
+    font-size: 1em;
+}
