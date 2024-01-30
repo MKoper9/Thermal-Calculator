@@ -16,7 +16,7 @@ class ThermalResistanceModelTest extends TestCase
         $thermalResistanceModel = new ThermalResistanceModel(0.1, 0.04);
 
         //When
-        $results = $thermalResistanceModel::calculate();
+        $results = $thermalResistanceModel->calculate();
 
         //Then
         $this->assertEquals(2.5, $results);

@@ -18,7 +18,7 @@ class ThermalResistanceModel extends AbstractModel
         $this->heatConductionCoefficient = $heatConductionCoefficient;
     }
 
-    public static function calculate(): float
+    public function calculate(): float
     {
         return $this->dimension / $this->heatConductionCoefficient;
     }

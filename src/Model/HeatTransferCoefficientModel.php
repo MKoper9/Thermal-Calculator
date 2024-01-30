@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace App\Model;
 
-use App\Model\ThermalResistance;
-
 class HeatTransferCoefficientModel extends AbstractModel
 {
     private int $type = 0;
@@ -20,27 +18,27 @@ class HeatTransferCoefficientModel extends AbstractModel
      * type = 2 heat stream top
      * type = 3 heat stream down
      */
-    public static function calculate(ThermalResistance ...$thermalResistance): float
+    public function calculate(ThermalResistanceModel ...$thermalResistance): float
     {
-        $sumOfresistance = 0;
+        $sumOfResistance = 0;
 
         foreach ($thermalResistance as $resistance) {
             $resistance = $resistance->calculate();
-            $sumOfresistance += $resistance;
+            $sumOfResistance += $resistance;
         }
 
         switch ($this->type) {
             case 1:
-                $sumOfresistance += 0.17;
+                $sumOfResistance += 0.17;
                 break;
             case 2:
-                $sumOfresistance += 0.14;
+                $sumOfResistance += 0.14;
                 break;
             case 3:
-                $sumOfresistance += 0.21;
+                $sumOfResistance += 0.21;
                 break;
         }
 
-        return 1/$sumOfresistance;
+        return round(1/$sumOfResistance, 4);
     }
 }
