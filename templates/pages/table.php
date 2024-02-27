@@ -9,14 +9,24 @@
 </head>
 
 <body>
+        <div id="main_menu">
+			<ul id="top_menu">
+				<li><a href="#"><span class="link">Tabela materiałów</span></a></li>
+				<li><a href="#"><span class="link"></span>Obliczenia</span></a></li>
+				<li><a href="#"><span class="link"></span>O mnie</span></a></li>
+				<li><a href="#"><span class="link"></span>Kontakt</span></a></li>
+			</ul>
+		</div>
+        <br/>
+        <br/>
     <table>
         <thead>
             <tr class="name">
                 <th>Id</th>
-                <th>Material</th>
-                <th>Density</th>
-                <th>Specific Heat</th>
-                <th>Heat Conduction Coefficient</th>
+                <th>Materiał</th>
+                <th>Gęstość</th>
+                <th>Ciepło właściwe</th>
+                <th>Współczynnik przewodzenia ciepła</th>
             </tr>
             <tr class="standard">
                 <th>[-]</th>
